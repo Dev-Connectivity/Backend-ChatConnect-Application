@@ -4,31 +4,24 @@ This repository contains the backend code for the Chat Connect Application. Belo
 
 ## Folder Structure
 
-- config/
-  - database.js
-  - server.js
-- controllers/
-  - authController.js
-  - userController.js
-  - chatController.js
-- middlewares/
-  - authMiddleware.js
-- models/
-  - User.js
-  - Chat.js
-  - Message.js
-- routes/
-  - authRoutes.js
-  - userRoutes.js
-  - chatRoutes.js
-- services/
-  - authService.js
-  - userService.js
-  - chatService.js
-- utils/
-  - errorHandler.js
-- app.js
-- server.js
+- src/
+  - index.js             // Entry point of the application
+  - app.js               // Express application setup
+  - config/              // Configuration files (e.g., database, environment variables)
+  - db/                  // Database related files
+    - models/            // Database models or schemas
+    - migrations/        // Database migration scripts
+    - seeders/           // Database seed scripts
+  - api/                 // API related files
+    - controllers/       // Handles request/response logic
+    - middlewares/       // Middleware functions for request processing
+    - routes/            // API routes and endpoint definitions
+  - services/            // Business logic and data manipulation
+  - sockets/             // WebSocket server and event handlers
+  - utils/               // Utility functions or helper modules
+  - tests/               // Unit tests or integration tests
+- package.json           // Dependencies and scripts configuration
+
 
 
 

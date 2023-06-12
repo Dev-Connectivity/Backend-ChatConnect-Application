@@ -1,0 +1,19 @@
+{
+  "name": "backend-chatconnect-application",
+  "version": "1.0.0",
+  "description": "chatapp",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bhupi2508/Backend-ChatConnect-Application.git"
+  },
+  "author": "github/Bhupi2508",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bhupi2508/Backend-ChatConnect-Application/issues"
+  },
+  "homepage": "https://github.com/Bhupi2508/Backend-ChatConnect-Application#readme"
+}
