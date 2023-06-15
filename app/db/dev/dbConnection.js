@@ -10,7 +10,7 @@
 required files
 */
 import pool from './pool';
-import { Constants } from '../../constants/constant';
+import { Constants } from '../../constants/sqlQueries';
 
 pool.on('connect', () => {
   console.log('connected to the db');
