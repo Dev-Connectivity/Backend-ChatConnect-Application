@@ -1,6 +1,6 @@
 /******************************************************************************
  *  @Execution      : default node : cmd> nodemon userRoute.js
- *  @description    : This file is used to create the API endpoints (route) 
+ *  @description    : This file is used to create the API endpoints (routes) 
  *  @file           : Backend ChatConnect Application
  *  @version        : 1.0
  *  @since          : 14-june-2023
