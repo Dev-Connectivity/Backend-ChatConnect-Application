@@ -21,7 +21,7 @@ import {
 } from '../helpers/validations';
 
 import { errorMessage, successMessage, status } from '../helpers/status';
-import { Constants } from '../constants/constant';
+import { Constants } from '../constants/sqlQueries';
 import sendmail from '../config/sendMail';
 import { HtmlConstants } from '../constants/htmlContent';
 
