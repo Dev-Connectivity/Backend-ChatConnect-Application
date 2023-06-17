@@ -26,40 +26,32 @@ const createUserTable = () => {
 };
 
 /**
- * Create user Post Table
+ * Create user conversation Table
  */
 const userPostTable = () => {
-  const userPostQuery = Constants.USER_POST_TABLE_CREATION;
+  const userPostQuery = Constants.CONVERSATION_TABLE_CREATION;
 
   return pool.query(userPostQuery);
 };
 
 /**
- * Create user Likes Table
+ * Create user between conversation Table
  */
 const userLikesTable = () => {
-  const userLikeQuery = Constants.USER_LIKE_TABLE_CREATION;
+  const userLikeQuery = Constants.USER_CONVERSATION_TABLE_CREATION;
 
   return pool.query(userLikeQuery);
 };
 
 /**
- * Create user Comments Table
+ * Create user message Table
  */
 const userCommentsTable = () => {
-  const userCommentQuery = Constants.USER_COMMENT_TABLE_CREATION;
+  const userCommentQuery = Constants.MESSAGE_TABLE_CREATION;
 
   return pool.query(userCommentQuery);
 };
 
-/**
- * Create user Accounts Table
- */
-const userAccountsTable = () => {
-  const userAccountQuery = Constants.ACCOUNTS_TABLE_CREATION;
-
-  return pool.query(userAccountQuery);
-};
 
 /**
  * Drop User Table
@@ -80,7 +72,6 @@ const createAllTables = async () => {
     await userPostTable();
     await userLikesTable();
     await userCommentsTable();
-    await userAccountsTable();
     console.log("All tables created successfully.");
   } catch (err) {
     console.error(err);

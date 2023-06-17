@@ -75,4 +75,7 @@ export class Constants {
   static UPDATE_QUERY = ''; // Add your update query here
   static GETALLUSER_QUERY = 'SELECT * FROM users;'
   static RESETPASS_QUERY = `UPDATE users SET password = $1 WHERE email = $2 RETURNING *`;
+
+  // Conversation
+  static USER_CONVERSATION = `INSERT INTO conversations (name, created_on) VALUES ($1, $2) RETURNING *`;
 }

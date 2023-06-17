@@ -10,13 +10,13 @@
 required files
 */
 import express from 'express';
-import { } from '../controllers/chatController';
-// import verifyAuth from '../helpers/verifyAuth';
+import { conversation } from '../controllers/chatController';
+import verifyAuth from '../helpers/verifyAuth';   
 
 const router = express.Router();
 
-router.post('/conversation', createUser);
-router.post('/addUserToConversation', createUser);
-router.post('/chat', createUser);
+router.post('/conversation', verifyAuth, conversation);
+// router.post('/addUserToConversation', verifyAuth, createUser);
+// router.post('/chat', createUser);
 
 export default router;

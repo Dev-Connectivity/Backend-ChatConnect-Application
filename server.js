@@ -13,6 +13,7 @@ import 'babel-polyfill';
 import cors from 'cors';
 const swagger = require('./app/config/swagger');
 import usersRoute from './app/routes/userRoute';
+import chatRoute from './app/routes/chatRoute';
 import env from './env';
 
 const app = express();
@@ -29,6 +30,7 @@ swagger(app);
 
 // Use the Swagger route
 app.use('/v1', usersRoute);
+app.use('/v1', chatRoute);
 
 
 app.listen(env.PORT).on('listening', () => {
