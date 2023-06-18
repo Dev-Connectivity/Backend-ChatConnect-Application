@@ -78,4 +78,7 @@ export class Constants {
 
   // Conversation
   static USER_CONVERSATION = `INSERT INTO conversations (name, created_on) VALUES ($1, $2) RETURNING *`;
+  static GET_ALL_CONVERSATION = `SELECT * FROM conversations`;
+  static GET_SPECIFIC_CONVERSATION = `SELECT * FROM conversations WHERE id = $1`;
+  static UPDATE_CONVERSATION = `UPDATE conversations SET name = $1 WHERE id = $2 RETURNING *`
 }
