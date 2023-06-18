@@ -154,9 +154,42 @@ const updateConversation = async (req, res) => {
 }
 
 
+
+/*********************************************************************************
+* delete a conversation
+* @param {object} req
+* @param {object} res
+* @returns {object} reflection object
+*********************************************************************************/
+const deleteConversation = async (req, res) => {
+    const { id } = req.body;
+
+    // db query used to delete converation
+    const deleteQuery = Constants.DELETE_CONVERSATION;
+
+    try {
+        const { rows, rowCount } = await dbQuery.query(deleteQuery, [id])
+
+        // If email doesn't exist in the table
+        if (rowCount === 0) {
+            const errorMessage = { error: 'Conversation with this id does not exist' };
+            return res.status(status.notfound).send(errorMessage);
+        }
+
+        const successMessage = { message: 'Conversation delete successfully' };
+        return res.status(status.success).send(successMessage);
+    } catch (err) {
+        console.log("error :::: ", err)
+        errorMessage.error = 'Operation was not successful';
+        return res.status(status.error).send(errorMessage);
+    }
+}
+
+
 export {
     conversation,
     getAllConversation,
     getSpecificConversation,
-    updateConversation
+    updateConversation,
+    deleteConversation
 }

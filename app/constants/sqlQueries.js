@@ -81,4 +81,5 @@ export class Constants {
   static GET_ALL_CONVERSATION = `SELECT * FROM conversations`;
   static GET_SPECIFIC_CONVERSATION = `SELECT * FROM conversations WHERE id = $1`;
   static UPDATE_CONVERSATION = `UPDATE conversations SET name = $1 WHERE id = $2 RETURNING *`
+  static DELETE_CONVERSATION = `DELETE FROM conversations WHERE id = $1`;
 }
