@@ -10,13 +10,15 @@
 required files
 */
 import express from 'express';
-import { conversation } from '../controllers/chatController';
+import { conversation, getAllConversation, getSpecificConversation,updateConversation } from '../controllers/chatController';
 import verifyAuth from '../helpers/verifyAuth';   
 
 const router = express.Router();
 
-router.post('/conversation', verifyAuth, conversation);
-// router.post('/addUserToConversation', verifyAuth, createUser);
+router.post('/add-conversation', conversation);
+router.get('/get-all-conversation', getAllConversation);
+router.post('/get-specific-conversation', getSpecificConversation);
+router.post('/update-conversation', updateConversation);
 // router.post('/chat', createUser);
 
 export default router;
